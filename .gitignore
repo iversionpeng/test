@@ -1,0 +1,14 @@
+*.iml
+target/
+tmp/
+.idea/
+img/
+*.xlsx
+*.txt
+*.png
+*.jpg
+*.log
+*.jpeg
+*.class
+*.html
+
