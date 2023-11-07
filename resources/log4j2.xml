@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <!-- 控制台日志 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%msg%n"/>
+        </Console>
+
+        <!-- 文件日志 -->
+        <File name="File" fileName="info.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <!-- 控制台日志 -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+
+        <!-- 文件日志 -->
+        <Logger name="com.debug2016.ocr" level="info">
+            <AppenderRef ref="File"/>
+        </Logger>
+
+        <!-- 三方包日志 -->
+        <Logger name="org.bytedeco" level="debug">
+            <AppenderRef ref="File"/>
+        </Logger>
+    </Loggers>
+</Configuration>
