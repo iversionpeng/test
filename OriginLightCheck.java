@@ -84,7 +84,7 @@ public class OriginLightCheck {
         MatExpr kernel = ones(3, 3, CV_8UC1);
         Mat securityErodeMat = new Mat();
         erode(securityDilateMat, securityErodeMat, kernel.asMat(), new Point(CommonIqcConsts.ERODE_POINT_X, CommonIqcConsts.ERODE_POINT_Y), 4, BORDER_CONSTANT, morphologyDefaultBorderValue());
-        //9.找到防伪区域的轮廓
+        //9.找到防伪区域的轮廓,该对象被回收
         MatVector contours = new MatVector();
         objects.add(new MyReference(contours, sessionId, "contours"));
         Mat hierarchy = new Mat();
